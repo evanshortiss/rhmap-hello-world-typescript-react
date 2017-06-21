@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" href="css/app.css">
+
+    <title>RHMAP Hello World TypeScript & React</title>
+  </head>
+  <body>
+    <div id="hello-world-app"></div>
+
+    <!-- cordova library - will 404 unless running on device (not an issue) -->
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <!-- bundle of our dependencies - created using browserify "require" -->
+    <script src="vendor.js"></script>
+
+    <!-- bundle of our app source - created using typescript & browserify -->
+    <script src="bundle.js"></script>
+	</body>
+</html>

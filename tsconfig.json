@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "target": "es5",
+    "jsx": "react",
+		"moduleResolution": "node",
+		"skipLibCheck": true
+  },
+  "files": ["src/index.tsx"]
+}

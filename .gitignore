@@ -1,0 +1,13 @@
+node_modules/
+
+platforms/
+plugins/
+
+.DS_Store
+
+*.js
+*.js.map
+*.log
+*.rdb
+
+.vscode

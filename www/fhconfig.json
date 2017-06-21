@@ -1,0 +1,8 @@
+{
+  "appid": "<AppID from RHMAP>",
+  "appkey": "<App API Key from RHMAP>",
+  "apptitle": "<App title from RHMAP>",
+  "connectiontag": "<A valid connection tag from RHMAP>",
+  "projectid": "<The project ID for this App on RHMAP>",
+  "host": "<RHMAP Host>"
+}

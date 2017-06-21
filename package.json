@@ -1,0 +1,39 @@
+{
+  "name": "ts-react-hello-world",
+  "version": "0.1.0",
+  "description": "An RHMAP Hello World application written using TypeScript and React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run compile && npm run serve",
+    "serve": "echo 'Open http://localhost:8080/?url=http://localhost:8001\n' && concurrently 'http-server ./www -c -1' 'watchify -e src/index.js -o www/bundle.js --no-bundle-external --debug --verbose' 'tsc -w'",
+    "compile": "npm run compile-ts && npm run compile-vendor",
+    "compile-ts": "npm run tsc && npm run bundle",
+    "compile-vendor": "browserify -o www/vendor.js -r fh-js-sdk -r fastclick -r react-dom -r react",
+    "tsc": "tsc",
+    "install": "npm run compile",
+    "cordova": "cordova",
+    "ios-sim": "npm run compile && cordova run ios --emulator",
+    "android-sim": "npm run compile && cordova platform add android ; cordova run android --emulator",
+    "bundle": "browserify -e src/index.js -o www/bundle.js --no-bundle-external --debug"
+  },
+  "author": "Evan Shortiss",
+  "license": "MIT",
+  "dependencies": {
+    "@types/fastclick": "~1.0.28",
+    "@types/react": "~15.0.30",
+    "@types/react-dom": "~15.5.0",
+    "browserify-shim": "~3.8.14",
+    "fastclick": "~1.0.6",
+    "fh-js-sdk": "~2.19.0-rc1",
+    "react": "~15.6.1",
+    "react-dom": "~15.6.1",
+    "typescript": "~2.3.4"
+  },
+  "devDependencies": {
+    "concurrently": "~3.4.0",
+    "cordova": "~6.5.1",
+    "http-server": "~0.10.0",
+    "watchify": "~3.9.0"
+  }
+}
