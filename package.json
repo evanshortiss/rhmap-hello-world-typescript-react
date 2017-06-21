@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run compile && npm run serve",
-    "serve": "echo 'Open http://localhost:8080/?url=http://localhost:8001\n' && concurrently 'http-server ./www -c -1' 'watchify -e src/index.js -o www/bundle.js --no-bundle-external --debug --verbose' 'tsc -w'",
+    "serve": "echo 'View your application at - http://localhost:8080/?url=http://localhost:8001\n' && concurrently 'http-server ./www -c -1' 'watchify -e src/index.js -o www/bundle.js --no-bundle-external --debug --verbose' 'tsc -w'",
     "compile": "npm run compile-ts && npm run compile-vendor",
     "compile-ts": "npm run tsc && npm run bundle",
     "compile-vendor": "browserify -o www/vendor.js -r fh-js-sdk -r fastclick -r react-dom -r react",
