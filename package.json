@@ -11,7 +11,7 @@
     "compile": "tsc && npm run bundle-js && npm run vendor-js",
     "bundle-js": "browserify -e src/index.js -o www/bundle.js --no-bundle-external --debug",
     "vendor-js": "browserify -o www/vendor.js -r fh-js-sdk -r fastclick -r react-dom -r react",
-    "ios-sim": "npm run compile && cordova run ios --emulator",
+    "ios-sim": "npm run compile && cordova platform add ios ; && cordova run ios --emulator",
     "android-sim": "npm run compile && cordova platform add android ; cordova run android --emulator"
   },
   "author": "Evan Shortiss",
