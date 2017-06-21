@@ -4,18 +4,15 @@
   "description": "An RHMAP Hello World application written using TypeScript and React",
   "main": "index.js",
   "scripts": {
+    "install": "npm run compile",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run compile && npm run serve",
     "serve": "echo 'View your application at - http://localhost:8080/?url=http://localhost:8001\n' && concurrently 'http-server ./www -c -1' 'watchify -e src/index.js -o www/bundle.js --no-bundle-external --debug --verbose' 'tsc -w'",
-    "compile": "npm run compile-ts && npm run compile-vendor",
-    "compile-ts": "npm run tsc && npm run bundle",
-    "compile-vendor": "browserify -o www/vendor.js -r fh-js-sdk -r fastclick -r react-dom -r react",
-    "tsc": "tsc",
-    "install": "npm run compile",
-    "cordova": "cordova",
+    "compile": "tsc && npm run bundle-js && npm run vendor-js",
+    "bundle-js": "browserify -e src/index.js -o www/bundle.js --no-bundle-external --debug",
+    "vendor-js": "browserify -o www/vendor.js -r fh-js-sdk -r fastclick -r react-dom -r react",
     "ios-sim": "npm run compile && cordova run ios --emulator",
-    "android-sim": "npm run compile && cordova platform add android ; cordova run android --emulator",
-    "bundle": "browserify -e src/index.js -o www/bundle.js --no-bundle-external --debug"
+    "android-sim": "npm run compile && cordova platform add android ; cordova run android --emulator"
   },
   "author": "Evan Shortiss",
   "license": "MIT",
@@ -32,7 +29,7 @@
   },
   "devDependencies": {
     "concurrently": "~3.4.0",
-    "cordova": "~6.5.1",
+    "cordova": "~6.5.0",
     "http-server": "~0.10.0",
     "watchify": "~3.9.0"
   }

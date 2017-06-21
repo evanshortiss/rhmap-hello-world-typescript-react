@@ -15,9 +15,39 @@ These are a guideline, newer versions should work too:
 
 ### On RHMAP
 Running this appliaction on RHMAP can be achieved by going to your domain and
-creating a new blank project, or by selecting an existing project.
+selecting an existing project or creating a new blank project as shown below:
 
-Once you have a project you can add a new Client Application to it.
+![](https://raw.githubusercontent.com/evanshortiss/rhmap-hello-world-typescript-react/master/screenshots/1-create-project.png)
+
+Once you have a project you can add a new Client Application to it using the
+plus icon in the corner as shown below:
+
+![](https://raw.githubusercontent.com/evanshortiss/rhmap-hello-world-typescript-react/master/screenshots/2-project-created.png)
+
+When adding the Client Application choose "Import Existing Application" and when
+prompted to select a type choose "Cordova":
+
+![](https://raw.githubusercontent.com/evanshortiss/rhmap-hello-world-typescript-react/master/screenshots/3-create-client.png)
+
+Now, enter the HTTPS link to this repository when prompted and choose the
+master branch:
+
+![](https://raw.githubusercontent.com/evanshortiss/rhmap-hello-world-typescript-react/master/screenshots/4-create-client-import.png)
+
+Once the import is complete you can return to the project screen and add a Cloud
+Application similar to how you added the client:
+
+![](https://raw.githubusercontent.com/evanshortiss/rhmap-hello-world-typescript-react/master/screenshots/5-client-created.png)
+
+Select the regular "Cloud App" template and give it a name:
+
+![](https://raw.githubusercontent.com/evanshortiss/rhmap-hello-world-typescript-react/master/screenshots/6-create-cloud.png)
+
+Once the Cloud Application is created you can navigate back to your Client
+Application. Go to the "Build" screen and build the application for the platform
+of your choice! Don't foget to deploy the Cloud Application!
+
+![](https://raw.githubusercontent.com/evanshortiss/rhmap-hello-world-typescript-react/master/screenshots/7-build-client.png)
 
 ### On a Local Development Machine
 Before running locally be sure to get the [Hello World Cloud](https://github.com/feedhenry-templates/helloworld-cloud) setup locally.
