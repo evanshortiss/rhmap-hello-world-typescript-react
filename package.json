@@ -20,6 +20,7 @@
     "@types/fastclick": "~1.0.28",
     "@types/react": "~15.0.30",
     "@types/react-dom": "~15.5.0",
+    "browserify": "~16.1.1",
     "browserify-shim": "~3.8.14",
     "fastclick": "~1.0.6",
     "fh-js-sdk": "~2.19.0-rc1",
