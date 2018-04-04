@@ -5,9 +5,9 @@ plugins/
 
 .DS_Store
 
-*.js
 *.js.map
 *.log
 *.rdb
+src/**/*.js
 
 .vscode
